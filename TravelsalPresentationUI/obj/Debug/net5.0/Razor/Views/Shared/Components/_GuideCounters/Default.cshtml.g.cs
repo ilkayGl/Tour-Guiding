@@ -26,8 +26,15 @@ using TravelsalPresentationUI.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\Views\_ViewImports.cshtml"
+using EntitiyLayer.Concrete;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"845b186450c5df958957aeca875c8c8783b19692", @"/Views/Shared/Components/_GuideCounters/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"30b7535d763af147cd7f4a3a0e4a0b978573c7dc", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2f3bce6ce8110169ad5d65c7cf8cb12daf820ae8", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Components__GuideCounters_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

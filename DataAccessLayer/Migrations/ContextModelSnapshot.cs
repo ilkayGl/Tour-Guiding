@@ -61,13 +61,25 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CoverImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("DayNight")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Detail1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Detail2")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Price")

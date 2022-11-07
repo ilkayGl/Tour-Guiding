@@ -1,6 +1,5 @@
-﻿using DataAccessLayer.Concrete;
-using EntityLayer.Abstract;
-using Microsoft.EntityFrameworkCore;
+﻿using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
