@@ -22,10 +22,16 @@
 
     @RenderBody()
 
+    
+
     <!--FooterPartialView-->
     <partial name="~/Views/Shared/LayoutPartialView/_FooterPartialView.cshtml" />
 
+   
 </body>
 <!--ScriptPartialView-->
 <partial name="~/Views/Shared/LayoutPartialView/_ScriptPartialView.cshtml" />
+
+<!--Toastr-->
+@await Component.InvokeAsync("Notyf")
 </html>

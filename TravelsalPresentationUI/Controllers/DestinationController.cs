@@ -22,6 +22,7 @@ namespace TravelsalPresentationUI.Controllers
         [HttpGet]
         public IActionResult DestinationDetails(int id)
         {
+            ViewBag.i = id;
             var values = _destinationService.TGetByID(id);
             return View(values);
         }

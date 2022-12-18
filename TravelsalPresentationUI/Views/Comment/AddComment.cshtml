@@ -1,0 +1,60 @@
+﻿@*@model EntityLayer.Concrete.Comment*@
+
+<div class="leave-comment-form mt-5" id="reply">
+    <h4 class="side-title mb-2">Bir Yorum Bırakın</h4>
+    <p class="mb-4">
+        İşaretli alanları doldurmanız gerekmektedir.
+    </p>
+    <form id="form" asp-action="AddComment" asp-controller="Comment" method="post" enctype="multipart/form-data">
+        <input class="form-control" type="hidden" id="DestinationID" value="@ViewBag.i" required="">
+        <div class="form-group">
+            <textarea id="CommentContent" class="form-control" placeholder="Yorumunuz*" required=""
+                      spellcheck="false"></textarea>
+            @*<span class="badge badge-danger" asp-validation-for="CommentContent"></span>*@
+        </div>
+        <div class="input-grids row">
+
+            <div class="form-group col-lg-6">
+                <input type="text" id="CommentUser" class="form-control" placeholder="Adınız / Soyadınız*"
+                       required="">
+               @* <span class="badge badge-danger" asp-validation-for="CommentUser"></span>*@
+            </div>
+
+        </div>
+
+        <div class="submit text-right">
+            <button type="submit" onclick="Save()" class="btn btn-style btn-primary">Yorum Yap </button>
+        </div>
+    </form>
+</div>
+
+
+<script>
+
+    function Save() {
+
+        //Set the URL.
+        var controllerUrl = $("#form").attr("action");
+
+        var DestinationID = document.getElementById("DestinationID");
+        var CommentContent = document.getElementById("CommentContent");
+        var CommentUser = document.getElementById("CommentUser");
+        var form = document.getElementById("form");
+
+        var formData = new FormData(form);
+        formData.append("DestinationID", DestinationID.value);
+        formData.append("CommentContent", CommentContent.value);
+        formData.append("CommentUser", CommentUser.value);
+
+        var url = controllerUrl;
+
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        }).then(res => res.json())
+            .then(result => {
+                //alert("Yorum Kaydedildi!");
+                window.location.reload(1);
+            }, 1000);
+    }
+</script>

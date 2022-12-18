@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig_NewDbandNewClass : Migration
+    public partial class mig_newdbAdd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -70,7 +71,11 @@ namespace DataAccessLayer.Migrations
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Capacity = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    CoverImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Detail1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Detail2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Image2 = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -169,6 +174,34 @@ namespace DataAccessLayer.Migrations
                 {
                     table.PrimaryKey("PK_Testimonials", x => x.TestimonialID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    CommentID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CommentUser = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CommentContent = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CommentSate = table.Column<bool>(type: "bit", nullable: false),
+                    DestinationID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.CommentID);
+                    table.ForeignKey(
+                        name: "FK_Comments_Destinations_DestinationID",
+                        column: x => x.DestinationID,
+                        principalTable: "Destinations",
+                        principalColumn: "DestinationID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_DestinationID",
+                table: "Comments",
+                column: "DestinationID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -180,10 +213,10 @@ namespace DataAccessLayer.Migrations
                 name: "Abouts2");
 
             migrationBuilder.DropTable(
-                name: "Contacts");
+                name: "Comments");
 
             migrationBuilder.DropTable(
-                name: "Destinations");
+                name: "Contacts");
 
             migrationBuilder.DropTable(
                 name: "Features");
@@ -202,6 +235,9 @@ namespace DataAccessLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Testimonials");
+
+            migrationBuilder.DropTable(
+                name: "Destinations");
         }
     }
 }
