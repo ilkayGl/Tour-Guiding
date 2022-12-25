@@ -29,26 +29,27 @@ namespace TravelsalPresentationUI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddComment(Comment comment)
+        public JsonResult AddComment(Comment comment)
         {
             //p.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString()); //Farklı bir yöntem
             //p.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
 
+            //System.Threading.Thread.Sleep(2000);
             if (comment.CommentContent == null || comment.CommentUser == null)
             {
                 _notyf.Warning("Yorum Alanını Boş Bırakamazsınız.");
                 //_commentService.TAdd(comment);
-                return Json(true);
+                return Json(comment);
 
             }
 
-            comment.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            comment.Date = DateTime.Parse(DateTime.Now.ToString());
             comment.CommentSate = true;
 
             _commentService.TAdd(comment);
             _notyf.Success("Yorum Yaptınız");
 
-            return Json(true);
+            return Json(comment);
 
         }
 

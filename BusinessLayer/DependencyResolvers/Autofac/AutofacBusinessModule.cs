@@ -3,11 +3,18 @@ using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac.Core;
+using DataAccessLayer.Concrete;
 
 namespace BusinessLayer.DependencyResolvers.Autofac
 {
@@ -48,6 +55,9 @@ namespace BusinessLayer.DependencyResolvers.Autofac
             builder.RegisterType<CommentManager>().As<ICommentService>().SingleInstance();
             builder.RegisterType<EfCommentDal>().As<ICommentDal>().SingleInstance();
 
+
+
+            builder.RegisterType<Context>().AsSelf().SingleInstance();
 
         }
     }

@@ -1,0 +1,117 @@
+﻿@model TravelsalPresentationUI.Models.UserRegisterViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Kayıt Ol</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+          content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        };
+
+    </script>
+
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="~/Template/web/css/style.css" type="text/css" media="all" />
+    <!--//Style-CSS -->
+    <style type="text/css">
+        .att {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- /login-section -->
+    <section class="w3l-login-6">
+        <div class="login-hny">
+            <div class="form-content">
+                <div class="form-right">
+                    <div class="overlay">
+                        <div class="grid-info-form">
+                            <h5>Hey, Selam</h5>
+                            <h3>Giriş Ekranına Git</h3>
+
+                            <a href="/Login/SingIn" class="read-more-1 btn">Giriş Yap</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-left">
+                    <div class="middle">
+                        <h4>Kayıt Ol.</h4>
+                        <p>Şimdi Ücretsiz Kullanıcı Kaydını Oluştur.</p>
+                    </div>
+                    <form asp-action="SingUp" asp-controller="Login" method="post" class="signin-form" enctype="multipart/form-data">
+                        <div class="form-input">
+                            <label>Adınız</label>
+                            <input type="text" asp-for="Name" placeholder="" />
+                            <span asp-validation-for="Name" class="att"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>Soyadınız</label>
+                            <input type="text" asp-for="Surname" placeholder="" />
+                            <span asp-validation-for="Surname" class="att"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>Kullanıcı Adınız</label>
+                            <input type="text" asp-for="UserName" placeholder="" />
+                            <span asp-validation-for="UserName" class="att"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>Mail Adresiniz</label>
+                            <input type="email" asp-for="Mail" placeholder="" />
+                            <span asp-validation-for="Mail" class="att"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>Parola</label>
+                            <input type="password" asp-for="Password" required placeholder="" />
+                            <span asp-validation-for="Password" class="att"></span>
+
+                        </div>
+                        <div class="form-input">
+                            <label>Parola Tekrar</label>
+                            <input type="password" asp-for="ConfirmPassword" required placeholder="" />
+                            <span asp-validation-for="ConfirmPassword" class="att"></span>
+
+                        </div>
+                        <div class="att" asp-validation-summary="ModelOnly">
+                        </div>
+
+                        <label class="container">
+                            Kullanım Şartlarını Okudum - Onayladım
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <button class="btn">Yeni Kayıt Oluştur</button>
+                    </form>
+                    <div class="copy-right text-center">
+                        <p>
+                            © 2022 Invent Signup. All rights reserved | Design by
+                            <a href="#">İlkay Gül</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>

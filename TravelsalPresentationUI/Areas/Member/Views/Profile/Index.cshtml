@@ -1,0 +1,96 @@
+﻿@model TravelsalPresentationUI.Areas.Member.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<h1>Profil düzenleme sayfası</h1>
+
+
+<form method="post" asp-action="Index" asp-controller="Profile" autocomplete="off" enctype="multipart/form-data" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Adınız</label>
+        <input type="text" class="form-control" id="validationCustom01" asp-for="name" required>
+        <div class="invalid-feedback">
+            Lütfen Adınızı Giriniz
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Soyadınız</label>
+        <input type="text" class="form-control" id="validationCustom02" asp-for="surname" required>
+        <div class="invalid-feedback">
+            Lütfen Soyadınızı Giriniz
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">E-Posta Adresi</label>
+        <input type="text" class="form-control" id="validationCustom03" asp-for="mail" required>
+        <div class="invalid-feedback">
+            Lütfen Mail Adresinizi Giriniz
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">Parola</label>
+        <input type="text" class="form-control" id="validationCustom03" asp-for="password" required>
+        <div class="invalid-feedback">
+            Lütfen Bir Parola Giriniz
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">Parola Tekrar</label>
+        <input type="text" class="form-control" id="validationCustom03" asp-for="confirmpassword" required>
+        <div class="invalid-feedback">
+            Lütfen Parolayı Tekrar Giriniz
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">Telefon No</label>
+        <input type="text" class="form-control" id="validationCustom03" asp-for="phonenumber" required>
+        <div class="invalid-feedback">
+            Lütfen Telefon Numaranızı Giriniz
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">Resim</label>
+        <input type="file" class="form-control" id="validationCustom03" asp-for="Image" aria-label="file example" required>
+        <div class="invalid-feedback">Örnek geçersiz,form dosyası geri bildirimi</div>
+    </div>
+
+
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+
+                Şartlar ve koşulları kabul edin
+            </label>
+            <div class="invalid-feedback">
+                Göndermeden önce kabul etmelisiniz.
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Güncelle</button>
+    </div>
+</form>
+
+<script type="text/javascript">
+    (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
