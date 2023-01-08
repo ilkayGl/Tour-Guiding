@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace TravelsalPresentationUI.Areas.Member.Controllers
 {
     [Area("Member")]
-    [AllowAnonymous]
+    [Route("Member/[controller]/[action]")]
+    [Authorize]
     public class CommentController : Controller
     {
         public IActionResult Index()

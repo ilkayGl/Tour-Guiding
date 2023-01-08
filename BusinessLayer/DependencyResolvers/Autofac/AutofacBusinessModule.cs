@@ -55,6 +55,9 @@ namespace BusinessLayer.DependencyResolvers.Autofac
             builder.RegisterType<CommentManager>().As<ICommentService>().SingleInstance();
             builder.RegisterType<EfCommentDal>().As<ICommentDal>().SingleInstance();
 
+            builder.RegisterType<ReservationManager>().As<IReservationService>().SingleInstance();
+            builder.RegisterType<EfReservationDal>().As<IReservationDal>().SingleInstance();
+
 
 
             builder.RegisterType<Context>().AsSelf().SingleInstance();

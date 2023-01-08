@@ -184,8 +184,6 @@ C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\bin\Debug\net5.0\Micros
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Views\Login\SingUp.cshtml.g.cs
-C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Views\Login\SingIn.cshtml.g.cs
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Shared\_MemberLayout.cshtml.g.cs
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Comment\Index.cshtml.g.cs
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Shared\MemberLayoutPartial\_ScriptPartialView.cshtml.g.cs
@@ -197,3 +195,9 @@ C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Destination\Index.cshtml.g.cs
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Profile\Index.cshtml.g.cs
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Reservation\NewReservation.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Views\Account\SingUp.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Reservation\MyActiveReservation.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Reservation\MyOldReservation.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Reservation\MyApprovalReservation.cshtml.g.cs

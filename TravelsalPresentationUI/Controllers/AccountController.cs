@@ -9,13 +9,13 @@ using TravelsalPresentationUI.Models;
 namespace TravelsalPresentationUI.Controllers
 {
     [AllowAnonymous]
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly INotyfService _notyfService;
 
-        public LoginController(UserManager<AppUser> userManager, INotyfService notyfService, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, INotyfService notyfService, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _notyfService = notyfService;
@@ -44,7 +44,7 @@ namespace TravelsalPresentationUI.Controllers
                 var result = await _userManager.CreateAsync(appUser, p.Password);
                 if (result.Succeeded)
                 {
-                    RedirectToAction("SingIn", "Login");
+                    RedirectToAction("Login", "Account");
                 }
                 else
                 {
@@ -60,13 +60,13 @@ namespace TravelsalPresentationUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult SingIn()
+        public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> SingIn(UserSingInViewModel p)
+        public async Task<IActionResult> Login(UserSingInViewModel p)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace TravelsalPresentationUI.Controllers
             }
             else
             {
-                return RedirectToAction("SingIn", "Login");
+                return RedirectToAction("Login", "Account");
             }
             return View();
         }
