@@ -8,27 +8,34 @@
 
 <h1>Onay bekleyen rezervasyonlar</h1>
 
-<table class="table table-bordered">
-    <tr>
-        <th>#</th>
-        <th>Lokasyon</th>
-        <th>Kişi Sayısı</th>
-        <th>Oluşturulma Tarihi</th>
-        <th>Rezervasyon Tarihi</th>
-        <th>Açıklama</th>
-        <th>Durum</th>
-    </tr>
-    @foreach (var item in Model)
-    {
+@if (!Model.Any())
+{
+    <span> Onay bekleyen rezervasyon bulunmamaktadır.</span>
+}
+else
+{
+    <table class="table table-bordered table-responsive">
         <tr>
-            <td>#</td>
-            <td>@item.Destination.City</td>
-            <td>@item.PersonCount</td>
-            <td>@item.CreationDate</td>
-            <td>@item.ReservationDate</td>
-            <td>@item.Description</td>
-            <td>@item.Status</td>
-
+            <th>#</th>
+            <th>Lokasyon</th>
+            <th>Kişi Sayısı</th>
+            <th>Oluşturulma Tarihi</th>
+            <th>Rezervasyon Tarihi</th>
+            <th>Açıklama</th>
+            <th>Durum</th>
         </tr>
-    }
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>#</td>
+                <td>@item.Destination.City</td>
+                <td>@item.PersonCount</td>
+                <td>@item.CreationDate</td>
+                <td>@item.ReservationDate</td>
+                <td>@item.Description</td>
+                <td>@item.Status</td>
+
+            </tr>
+        }
+    </table>
+}
