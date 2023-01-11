@@ -203,3 +203,8 @@ C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Reservation\MyApprovalReservation.cshtml.g.cs
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Member\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_ProfileInformation\Default.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_GuideList\Default.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_PlatformSettings\Default.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\User\Masaustu\Travelsal\TravelsalPresentationUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Destination\Index.cshtml.g.cs
